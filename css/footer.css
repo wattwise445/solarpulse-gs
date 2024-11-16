@@ -1,0 +1,163 @@
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 64px 0 0 0;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64px;
+    padding: 0 24px;
+  }
+  
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .logo-container{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    strong{
+        font-size: 30px;
+        color: #fff;
+    }
+}
+  
+  .footer-logo {
+    width:400px;
+  }
+  
+  .footer-column p {
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  .footer-column h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 12px;
+  }
+  
+  .footer-column ul li a {
+
+    &:hover{
+        text-decoration: underline;
+    }
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-column ul li a:hover {
+    color: var(--primary-color);
+  }
+  
+  .social-media {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .social-media a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .social-media a:hover {
+    color: var(--primary-color);
+  }
+  
+  .social-media i {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #fff;
+  }
+  
+  .contact-item i {
+    width: 20px;
+    height: 20px;
+    color: var(--primary-color);
+  }
+  
+  .footer-bottom {
+    margin-top: 64px;
+    padding: 24px;
+    text-align: center;
+    border-top: 1px solid #333;
+  }
+  
+  .footer-bottom p {
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsividade atualizada */
+  @media (max-width: 1024px) {
+    .footer-container {
+      max-width: 90%;
+      gap: 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 0 20px;
+    }
+  
+    .footer-column {
+      text-align: center;
+      align-items: center;
+    }
+  
+    .contact-info {
+      align-items: center;
+    }
+  
+    .contact-item {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    footer {
+      padding: 40px 0 0 0;
+    }
+  
+    .logo-container strong {
+      font-size: 24px;
+    }
+  
+    .footer-bottom {
+      margin-top: 40px;
+    }
+  }

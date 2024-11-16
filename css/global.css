@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter Tight", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+:root {
+  --container-padding: 20px;
+  --container-max-width: 1000px;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --container-max-width: 90%;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Classe utilitária para containers */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+

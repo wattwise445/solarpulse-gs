@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/favico.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <title>SolarPulse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <header role="banner">
+        <nav role="navigation" aria-label="Menu principal">
+          <img src="./img/logo.svg" alt="Logo SolarPulse - Clique para voltar à página inicial" id="logo" />
+          <div class="navs">
+            <div class="nav-left">
+              <div class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu de navegação">
+                <i data-lucide="menu"></i>
+              </div>
+              <ul class="nav-menu" id="nav-menu" role="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Benefícios</a></li>
+                <li><a href="#">Serviço</a></li>
+                <li><a href="#" >Depoimentos</a></li>
+                <li><a href="#" >Simulação</a></li>
+              </ul>
+            </div>
+    
+            <div class="nav-right">
+              <a href="#" role="button">Fazer Orçamento</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main role="main">
+        <section id="hero" aria-labelledby="hero-title">
+            <div class="hero-container">
+          
+              <div class="container">
+                <h1>Energia do Futuro <br>ao Seu Alcance</h1>
+                <!-- <button>
+                  Conhecer as linhas
+                  <div><i data-lucide="arrow-right"></i></div>
+                </button> -->
+              </div>
+            </div>
+          </section>
+      </main>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-column">
+            <div class="logo-container">
+              <img src="./img/logo.svg" alt="Logo Solarpulse" class="footer-logo">
+            </div>  
+            <p>Nossa missão é revolucionar a forma como geramos e usamos energia.</p>
+            
+          </div>
+  
+            <!-- Coluna 2 - Contato -->
+            <div class="footer-column">
+              <h3>Contato</h3>
+              <div class="contact-info">
+                <div class="contact-item">
+                  <i data-lucide="phone"></i>
+                  <span>0800 XXX XXXX</span>
+                </div>
+                <div class="contact-item">
+                  <i data-lucide="mail"></i>
+                  <span>conectatrens@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                  <i data-lucide="clock"></i>
+                  <span>Seg - Sex: 06:30 - 22:00</span>
+                </div>
+                <div class="contact-item">
+                  <i data-lucide="clock"></i>
+                  <span>Sáb - Dom: 08:30 - 18:00</span>
+                </div>
+                <div class="contact-item">
+                  <i data-lucide="map-pin"></i>
+                  <span>Av. Principal, 1000<br>São Paulo - SP</span>
+                </div>
+              </div>
+            </div>
+      
+          <!-- Coluna 3 - Links Rápidos -->
+          <div class="footer-column">
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Benefícios</a></li>
+              <li><a href="#">Serviços</a></li>
+              <li><a href="#">Depoimentos</a></li>
+              <li><a href="#">Simulação</a></li>
+            </ul>
+          </div>
+      
+        
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 SolarPulse. Todos os direitos reservados.</p>
+        </div>
+      </footer>
+      <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="./js/faq.js"></script>
+    <script src="./js/menu.js"></script>
+</body>
+</html>
