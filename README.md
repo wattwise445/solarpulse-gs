@@ -1,131 +1,71 @@
-# Documentação do Projeto ConectaTrens 🚂
+# Documentação do Projeto SolarPulse 🌞
 
 ## Visão Geral
-O ConectaTrens é um sistema web desenvolvido para facilitar a experiência dos usuários do transporte ferroviário. O projeto possui uma interface intuitiva e responsiva, focada em fornecer informações sobre estações, horários e serviços relacionados ao transporte de trens.
+O **SolarPulse** é uma solução inovadora voltada para o gerenciamento e monitoramento de energia renovável em residências. A plataforma combina funcionalidades de simulação de geração de energia solar com monitoramento em tempo real do consumo energético. Com uma interface intuitiva e responsiva, o SolarPulse empodera os usuários a otimizarem seu consumo de energia, contribuindo para um futuro mais sustentável.
 
 ## Estrutura do Projeto
 
-### Páginas Principais
 
-1. **Home (index.html)**
-   - Página inicial com apresentação do sistema
-   - Seção de ações rápidas
-   - FAQ (Perguntas Frequentes)
-   - Busca rápida de estações
-   - Informações de horários de funcionamento
-
-2. **Estações (estacoes.html)**
-   - Mapa das linhas de trem
-   - Sistema de busca de estações
-   - Filtros por linha e estação
-
-3. **Comprovantes (comprovantes.html)**
-   - Sistema para geração de comprovantes de atraso
-   - Listagem por linha de trem
-   - Status das ocorrências
-
-4. **Contato (contato.html)**
-   - Formulário de contato
-   - Informações de atendimento
-
-5. **Integrantes (integrantes.html)**
-   - Informações sobre a equipe do projeto
-   - Links para redes sociais dos desenvolvedores
+1. **Tela inicial (index.html)**
+   - Visão geral da empresa
+   - Informações sobre economia financeira e impacto ambiental
+   - Ferramenta para simular a geração de energia solar com base na localização
 
 ### Componentes Comuns
 
 #### Header
-- Logo da empresa
+- Logo do SolarPulse
 - Menu de navegação responsivo
-- Links rápidos para contato
+- Acesso rápido ao simulador e histórico
 
 #### Footer
-- Informações de contato
-- Links de navegação
-- Horários de funcionamento
-- Endereço
-- Copyright
+- Links úteis e contatos
+- Informações sobre direitos autorais
+- Redes sociais do projeto
 
 ## Recursos de Acessibilidade
 
-O projeto implementa diversas práticas de acessibilidade:
+O SolarPulse segue as melhores práticas de acessibilidade para garantir que todos os usuários possam interagir com a plataforma:
 
-- Uso apropriado de tags semânticas (`header`, `main`, `footer`, `nav`)
-- Atributos ARIA para melhor navegação por leitores de tela
-- Labels descritivos para formulários
-- Textos alternativos para imagens
-- Estrutura hierárquica de cabeçalhos
+- Estrutura semântica com tags como `header`, `main`, `footer`, `nav`
+- Suporte a leitores de tela com atributos ARIA
+- Textos alternativos para todas as imagens e gráficos
+- Formulários com labels descritivos
+- Paleta de cores contrastante para melhor visualização
 
 ## Tecnologias Utilizadas
 
-- HTML5 semântico
-- CSS3 para estilização
-- JavaScript para interatividade
-- Biblioteca Lucide para ícones
-- Fontes do Google Fonts (Inter e Inter Tight)
+- **HTML5**: Estrutura semântica
+- **CSS3**: Estilização responsiva e moderna
+- **JavaScript**: Funcionalidades interativas e dinâmicas
+- **Chart.js**: Geração de gráficos dinâmicos
+- **Lucide**: Ícones estilizados
+- **Google Fonts**: Tipografia principal (Inter)
 
 ## Instruções de Uso
 
-### Para Desenvolvedores
 
-1. Clone o repositório
-2. Estrutura de arquivos:
-   ```
-   ├── index.html
-   ├── estacoes.html
-   ├── comprovantes.html
-   ├── contato.html
-   ├── integrantes.html
-   ├── css/
-   │   ├── global.css
-   │   ├── header.css
-   │   ├── home.css
-   │   ├── faq.css
-   │   ├── footer.css
-   │   ├── estacoes.css
-   │   ├── comprovante.css
-   │   └── contato.css
-   ├── js/
-   │   ├── faq.js
-   │   └── menu.js
-   └── img/
-       └── [arquivos de imagem]
-   ```
+1. **Monitoramento Energético**
+   - Acesse o **Dashboard** para visualizar seu consumo e geração de energia.
+   - Verifique os gráficos em tempo real.
 
-### Para Usuários
+2. **Simulador**
+   - Preencha os campos com informações sobre sua localização e painéis solares.
+   - Obtenha estimativas detalhadas de economia.
+.
 
-1. **Busca de Estações**
-   - Use o campo de busca na página inicial ou na seção de estações
-   - Selecione a linha desejada no filtro
-   - Digite o nome da estação
-
-2. **Geração de Comprovantes**
-   - Acesse a página de comprovantes
-   - Selecione a linha e estação
-   - Baixe o comprovante disponível
-
-3. **Contato**
-   - Preencha o formulário de contato
-   - Todos os campos marcados com * são obrigatórios
 
 ## Funcionalidades Principais
 
-- Busca de estações e linhas
-- Sistema de geração de comprovantes
-- FAQ interativo
-- Formulário de contato
-- Informações de horários e funcionamento
-- Menu responsivo para dispositivos móveis
+- **Monitoramento**: Acompanhe o consumo e a geração de energia.
+- **Simulação Personalizada**: Planeje a instalação de energia solar.
+- **Interface Responsiva**: Design otimizado para dispositivos móveis e desktops.
 
-## Manutenção
-
-Para adicionar novas funcionalidades ou fazer alterações:
-
-1. Mantenha a estrutura semântica do HTML
-2. Siga os padrões de acessibilidade estabelecidos
-3. Atualize a documentação quando necessário
-4. Teste em diferentes dispositivos e navegadores
 
 ## Status do Projeto
 
-O projeto está em desenvolvimento contínuo, com algumas seções marcadas como "Em Desenvolvimento" (como o mapa na página de estações).
+O **SolarPulse** encontra-se em fase de desenvolvimento ativo. Algumas funcionalidades, como integração com dispositivos IoT, estão em planejamento para futuras versões. 
+
+---
+
+Junte-se ao SolarPulse e ajude a construir um futuro sustentável! 🌱
