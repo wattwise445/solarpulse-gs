@@ -175,7 +175,7 @@
             <img src="./img/favico.svg" alt="SolarPulse" />
             <p>Calculadora de Economia Solar</p>
           </div>
-          <strong class="title">Desubra sua economia</strong>
+          <strong class="title">Descubra sua economia</strong>
           <p class="description">
             Descubra quanto você pode economizar ao adotar energia solar.
             Preencha as informações abaixo e receba uma simulação personalizada.
@@ -187,23 +187,25 @@
                 <label for="state" id="where-label">Selecione o Estado</label>
                 <div class="input-container">
                   <select id="state" class="select-input" name="state">
-                    <option class="first-opt" value="" disabled>
+                    <option selected class="first-opt" value="" disabled>
                       Selecione o estado
                     </option>
-                    <option selected value="linha1">São Paulo</option>
-                    <option value="linha2">Minas Gerais</option>
-                    <option value="linha3">Rio de Janeiro</option>
+                    <option value="state1">São Paulo</option>
+                    <option value="state2">Minas Gerais</option>
+                    <option value="state3">Rio de Janeiro</option>
                   </select>
                 </div>
               </div>
               <div class="form-component">
                 <label for="distribuidora">Selecione a distribuidora</label>
                 <div class="input-container">
-                  <select id="linha" class="select-input" name="linha">
+                  <select id="distribuidora" class="select-input" name="distribuidora">
                     <option selected class="first-opt" value="" disabled>
                       Selecione a distribuidora
                     </option>
-                    <option>Não sei</option>
+                    <option  value="distribuidora1">Enel</option>
+                    <option  value="distribuidora2">Light</option>
+                    <option  value="distribuidora3">Cemig</option>
                   </select>
                 </div>
               </div>
@@ -214,10 +216,13 @@
               >
               <div class="input-container">
                 <input
-                  type="text"
+                  type="number"
                   id="media-mensal"
                   placeholder="Insira a média mensal da sua conta de energia (R$)"
                   name="media-mensal"
+                  min="0"
+                  step="0.01"
+                  required
                 />
               </div>
             </div>
@@ -289,11 +294,57 @@
         <p>&copy; 2024 SolarPulse. Todos os direitos reservados.</p>
       </div>
     </footer>
+    <div id="resultModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Simulação de Economia</h2>
+        
+        <div class="comparacao-container">
+          <div class="valor-antes">
+            <h3>Antes do Solar</h3>
+            <div class="valor-box vermelho">
+              <span class="label">Gasto Mensal</span>
+              <span id="valorAtual" class="valor">R$ 0,00</span>
+            </div>
+            <div class="valor-box vermelho">
+              <span class="label">Gasto Anual</span>
+              <span id="gastoAnual" class="valor">R$ 0,00</span>
+            </div>
+          </div>
+
+          <div class="seta">→</div>
+
+          <div class="valor-depois">
+            <h3>Com Energia Solar</h3>
+            <div class="valor-box verde">
+              <span class="label">Nova Conta</span>
+              <span id="economiaMensal" class="valor">R$ 0,00</span>
+            </div>
+            <div class="valor-box verde">
+              <span class="label">Economia Anual</span>
+              <span id="economiaAnualValor" class="valor">R$ 0,00</span>
+            </div>
+          </div>
+        </div>
+       <div id="resultados">
+        <div class="resultado-item">
+          <h3>Economia Anual Estimada</h3>
+          <p id="economiaAnualTotal">R$ 0,00</p>
+        </div>
+        <div class="resultado-item">
+          <h3>Redução Estimada na Conta</h3>
+          <p id="reducaoEstimada">0%</p>
+        </div>
+      </div>
+      <button class="form-button" id="contatoBtn">Entrar em Contato</button>
+       </div>
+    </div>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       lucide.createIcons();
     </script>
-    <script src="./js/faq.js"></script>
     <script src="./js/menu.js"></script>
+    <script src="./js/calculadora.js"></script>
+  
   </body>
 </html>
