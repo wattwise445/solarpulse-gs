@@ -112,6 +112,82 @@
           />
         </div>
       </section>
+
+      <section id="depoimentos">
+        <div class="text">
+          <img src="./img/favico.svg" alt="SolarPulse" />
+          <p>Depoimentos</p>
+        </div>
+        <strong class="title">O que nossos clientes dizem?</strong>
+        <div class="depoimentos-cards">
+          <div class="depoimento-card">
+            <div class="stars">
+              <img src="./img/star.svg" alt="Estrela de avaliação" />
+              <img src="./img/star.svg" alt="Estrela de avaliação" />
+              <img src="./img/star.svg" alt="Estrela de avaliação" />
+              <img src="./img/star.svg" alt="Estrela de avaliação" />
+              <img src="./img/star.svg" alt="Estrela de avaliação" />
+            </div>
+            <p class="depoimento-desc">
+              “Tinha dúvidas sobre o investimento em energia solar, mas a
+              consultoria personalizada me ajudou a entender os benefícios. O
+              sistema foi instalado sem complicações e estou extremamente
+              satisfeito com os resultados.”
+            </p>
+            <div class="profile">
+              <div class="icon-shape"></div>
+              <div class="name-state">
+                <strong>André Pacheco</strong>
+                <span>São Paulo</span>
+              </div>
+            </div>
+          </div>
+          <div class="depoimento-card">
+            <div class="stars">
+              <img src="./img/star.svg" alt="Estrela de avaliação" />
+              <img src="./img/star.svg" alt="Estrela de avaliação" />
+              <img src="./img/star.svg" alt="Estrela de avaliação" />
+              <img src="./img/star.svg" alt="Estrela de avaliação" />
+              <img src="./img/star-out.svg" alt="Estrela de avaliação" />
+            </div>
+            <p class="depoimento-desc">
+              “A instalação do sistema fotovoltaico na minha empresa foi
+              impecável. O suporte técnico é excelente e a economia nas despesas
+              de energia superou minhas expectativas. Recomendo sem hesitar!”
+            </p>
+            <div class="profile">
+              <div class="icon-shape"></div>
+              <div class="name-state">
+                <strong>Sebastião Ferreira</strong>
+                <span>Rio de Janeiro</span>
+              </div>
+            </div>
+          </div>
+          <div class="depoimento-card">
+            <div class="stars">
+              <img src="./img/star.svg" alt="Estrela de avaliação" />
+              <img src="./img/star.svg" alt="Estrela de avaliação" />
+              <img src="./img/star.svg" alt="Estrela de avaliação" />
+              <img src="./img/star.svg" alt="Estrela de avaliação" />
+              <img src="./img/star.svg" alt="Estrela de avaliação" />
+            </div>
+            <p class="depoimento-desc">
+              “Adotar energia solar foi uma das melhores decisões que já tomei.
+              Além de economizar 80% na conta de luz, sei que estou contribuindo
+              para o meio ambiente. A equipe foi muito profissional e o processo
+              foi super rápido.”
+            </p>
+            <div class="profile">
+              <div class="icon-shape"></div>
+              <div class="name-state">
+                <strong>Ana Costa</strong>
+                <span>Rondônia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="servicos">
         <div class="text">
           <img src="./img/favico.svg" alt="SolarPulse" />
@@ -199,13 +275,17 @@
               <div class="form-component">
                 <label for="distribuidora">Selecione a distribuidora</label>
                 <div class="input-container">
-                  <select id="distribuidora" class="select-input" name="distribuidora">
+                  <select
+                    id="distribuidora"
+                    class="select-input"
+                    name="distribuidora"
+                  >
                     <option selected class="first-opt" value="" disabled>
                       Selecione a distribuidora
                     </option>
-                    <option  value="distribuidora1">Enel</option>
-                    <option  value="distribuidora2">Light</option>
-                    <option  value="distribuidora3">Cemig</option>
+                    <option value="distribuidora1">Enel</option>
+                    <option value="distribuidora2">Light</option>
+                    <option value="distribuidora3">Cemig</option>
                   </select>
                 </div>
               </div>
@@ -226,7 +306,9 @@
                 />
               </div>
             </div>
-            <button href="#" role="button" class="form-button">Fazer Orçamento</button>
+            <button href="#" role="button" class="form-button">
+              Fazer Orçamento
+            </button>
           </form>
         </div>
 
@@ -298,7 +380,7 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Simulação de Economia</h2>
-        
+
         <div class="comparacao-container">
           <div class="valor-antes">
             <h3>Antes do Solar</h3>
@@ -326,18 +408,18 @@
             </div>
           </div>
         </div>
-       <div id="resultados">
-        <div class="resultado-item">
-          <h3>Economia Anual Estimada</h3>
-          <p id="economiaAnualTotal">R$ 0,00</p>
+        <div id="resultados">
+          <div class="resultado-item">
+            <h3>Economia Anual Estimada</h3>
+            <p id="economiaAnualTotal">R$ 0,00</p>
+          </div>
+          <div class="resultado-item">
+            <h3>Redução Estimada na Conta</h3>
+            <p id="reducaoEstimada">0%</p>
+          </div>
         </div>
-        <div class="resultado-item">
-          <h3>Redução Estimada na Conta</h3>
-          <p id="reducaoEstimada">0%</p>
-        </div>
+        <button class="form-button" id="contatoBtn">Entrar em Contato</button>
       </div>
-      <button class="form-button" id="contatoBtn">Entrar em Contato</button>
-       </div>
     </div>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
@@ -345,6 +427,5 @@
     </script>
     <script src="./js/menu.js"></script>
     <script src="./js/calculadora.js"></script>
-  
   </body>
 </html>
