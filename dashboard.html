@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/favico.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/header-dashboard.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <title>SolarPulse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header role="banner">
+      <nav role="navigation" aria-label="Menu principal">
+        <img
+          src="./img/logo3.svg"
+          alt="Logo SolarPulse - Clique para voltar à página inicial"
+          id="logo"
+        />
+        <div class="navs">
+          <div class="nav-left">
+            <div
+              class="menu-toggle"
+              aria-expanded="false"
+              aria-controls="nav-menu"
+              aria-label="Abrir menu de navegação"
+            >
+              <i data-lucide="menu"></i>
+            </div>
+          </div>
+
+          <div class="nav-right">
+            <a href="/" role="button">Sair</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="overview">
+        <div class="overview-left">
+          <div class="top">
+            <div class="total-gerado">
+              <span>Total Gerado</span>
+              <strong>57 kWh</strong>
+              <strong class="codigo">AH-3zx</strong>
+            </div>
+            <img src="./img/solar-panel.png" alt="Painel Solar" />
+          </div>
+        </div>
+        <div class="overview-right">
+          <div class="data-container">
+            <div class="data">
+              <p><strong>97</strong> kWh</p>
+              <div>
+                <i data-lucide="battery-charging"></i>
+                <span>Capacidade</span>
+              </div>
+            </div>
+            <div class="data">
+              <p><strong>19</strong> mWh</p>
+              <div>
+                <i data-lucide="zap"></i>
+                <span>Produzido</span>
+              </div>
+            </div>
+            <div class="data">
+              <p><strong>0.2</strong> kt</p>
+              <div>
+                <img src="./img/co2.svg" alt="Gasto de Co2" />
+                <span>CO2 Salvo</span>
+              </div>
+            </div>
+          </div>
+          <div class="division"></div>
+          <div class="economy-container">
+            <span>Economia feita</span>
+
+            <div>
+              <div class="column">
+                <strong>R$ 8,87</strong>
+                <span>hoje</span>
+              </div>
+              <div class="column">
+                <strong>R$ 132,15</strong>
+                <span>mensal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="new-month">
+          <h2>Visão geral dos últimos meses</h2>
+          <button>
+                <i data-lucide="plus"></i>
+                Novo mês
+          </button>
+      </div>
+
+        <div class="table-chart-container">
+          <div class="table-wrapper">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Mês</th>
+                  <th>Produzido</th>
+                  <th>Utilizada</th>
+                  <th>Economia</th>
+                  <th>Modelo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Janeiro</td>
+                  <td>150 kWh</td>
+                  <td>120 kWh</td>
+                  <td>R$ 30,00</td>
+                  <td>AH-3zx</td>
+                </tr>
+                <tr>
+                  <td>Fevereiro</td>
+                  <td>180 kWh</td>
+                  <td>140 kWh</td>
+                  <td>R$ 35,00</td>
+                  <td>AH-3zx</td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário -->
+              </tbody>
+            </table>
+          </div>
+          <canvas id="economyChart"></canvas>
+        </div>
+        <div class="modal" id="newMonthModal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3>Adicionar Novo Mês</h3>
+                <button class="close-modal">&times;</button>
+              </div>
+              <form id="newMonthForm">
+                <div class="form-group">
+                  <label for="month">Mês:</label>
+                  <select id="month" required>
+                    <option value="">Selecione o mês</option>
+                    <option value="Janeiro">Janeiro</option>
+                    <option value="Fevereiro">Fevereiro</option>
+                    <option value="Março">Março</option>
+                    <option value="Abril">Abril</option>
+                    <option value="Maio">Maio</option>
+                    <option value="Junho">Junho</option>
+                    <option value="Julho">Julho</option>
+                    <option value="Agosto">Agosto</option>
+                    <option value="Setembro">Setembro</option>
+                    <option value="Outubro">Outubro</option>
+                    <option value="Novembro">Novembro</option>
+                    <option value="Dezembro">Dezembro</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="produced">Produzido (kWh):</label>
+                  <input type="number" id="produced" required>
+                </div>
+                <div class="form-group">
+                  <label for="used">Utilizado (kWh):</label>
+                  <input type="number" id="used" required>
+                </div>
+                <button type="submit" class="submit-btn">Adicionar</button>
+              </form>
+            </div>
+          </div>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <div class="logo-container">
+            <img
+              src="./img/logo.svg"
+              alt="Logo Solarpulse"
+              class="footer-logo"
+            />
+          </div>
+          <p>
+            Nossa missão é revolucionar a forma como geramos e usamos energia.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contato</h3>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i data-lucide="phone"></i>
+              <span>0800 XXX XXXX</span>
+            </div>
+            <div class="contact-item">
+              <i data-lucide="mail"></i>
+              <span>solarpulse@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <i data-lucide="clock"></i>
+              <span>Seg - Sex: 06:30 - 22:00</span>
+            </div>
+            <div class="contact-item">
+              <i data-lucide="clock"></i>
+              <span>Sáb - Dom: 08:30 - 18:00</span>
+            </div>
+            <div class="contact-item">
+              <i data-lucide="map-pin"></i>
+              <span>Av. Principal, 1000<br />São Paulo - SP</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>Navegação</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#calculadora">Simulação</a></li>
+            <li><a href="./dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 SolarPulse. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById("economyChart").getContext("2d");
+
+      const economyChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Janeiro", "Fevereiro"],
+          datasets: [{
+            label: "Economia Gerada (R$)",
+            data: [30.00, 35.00],
+            backgroundColor: "#f4a424",
+            borderColor: "#f4a424",
+            borderWidth: 1,
+            opacity: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Economia (R$)'
+              }
+            },
+            x: {
+              title: {
+                display: true,
+                text: 'Meses'
+              }
+            }
+          }
+        }
+      });
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/dashboard.js"></script>
+    
+  </body>
+</html>

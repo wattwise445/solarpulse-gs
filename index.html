@@ -39,6 +39,7 @@
               <li><a href="#beneficios">Benefícios</a></li>
               <li><a href="#servicos">Serviço</a></li>
               <li><a href="#calculadora">Simulação</a></li>
+              <li><a href="./dashboard.html">Dashboard</a></li>
             </ul>
           </div>
 
@@ -318,6 +319,51 @@
           class="calculadora-wallpaper"
         />
       </section>
+      <div id="resultModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Simulação de Economia</h2>
+  
+          <div class="comparacao-container">
+            <div class="valor-antes">
+              <h3>Antes do Solar</h3>
+              <div class="valor-box vermelho">
+                <span class="label">Gasto Mensal</span>
+                <span id="valorAtual" class="valor">R$ 0,00</span>
+              </div>
+              <div class="valor-box vermelho">
+                <span class="label">Gasto Anual</span>
+                <span id="gastoAnual" class="valor">R$ 0,00</span>
+              </div>
+            </div>
+  
+            <div class="seta">→</div>
+  
+            <div class="valor-depois">
+              <h3>Com Energia Solar</h3>
+              <div class="valor-box verde">
+                <span class="label">Nova Conta</span>
+                <span id="economiaMensal" class="valor">R$ 0,00</span>
+              </div>
+              <div class="valor-box verde">
+                <span class="label">Economia Anual</span>
+                <span id="economiaAnualValor" class="valor">R$ 0,00</span>
+              </div>
+            </div>
+          </div>
+          <div id="resultados">
+            <div class="resultado-item">
+              <h3>Economia Anual Estimada</h3>
+              <p id="economiaAnualTotal">R$ 0,00</p>
+            </div>
+            <div class="resultado-item">
+              <h3>Redução Estimada na Conta</h3>
+              <p id="reducaoEstimada">0%</p>
+            </div>
+          </div>
+          <button class="form-button" id="contatoBtn">Entrar em Contato</button>
+        </div>
+      </div>
     </main>
     <footer>
       <div class="footer-container">
@@ -369,6 +415,8 @@
             <li><a href="#beneficios">Benefícios</a></li>
             <li><a href="#servicos">Serviços</a></li>
             <li><a href="#calculadora">Simulação</a></li>
+            <li><a href="./dashboard.html">Dashboard</a></li>
+
           </ul>
         </div>
       </div>
@@ -376,51 +424,7 @@
         <p>&copy; 2024 SolarPulse. Todos os direitos reservados.</p>
       </div>
     </footer>
-    <div id="resultModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Simulação de Economia</h2>
-
-        <div class="comparacao-container">
-          <div class="valor-antes">
-            <h3>Antes do Solar</h3>
-            <div class="valor-box vermelho">
-              <span class="label">Gasto Mensal</span>
-              <span id="valorAtual" class="valor">R$ 0,00</span>
-            </div>
-            <div class="valor-box vermelho">
-              <span class="label">Gasto Anual</span>
-              <span id="gastoAnual" class="valor">R$ 0,00</span>
-            </div>
-          </div>
-
-          <div class="seta">→</div>
-
-          <div class="valor-depois">
-            <h3>Com Energia Solar</h3>
-            <div class="valor-box verde">
-              <span class="label">Nova Conta</span>
-              <span id="economiaMensal" class="valor">R$ 0,00</span>
-            </div>
-            <div class="valor-box verde">
-              <span class="label">Economia Anual</span>
-              <span id="economiaAnualValor" class="valor">R$ 0,00</span>
-            </div>
-          </div>
-        </div>
-        <div id="resultados">
-          <div class="resultado-item">
-            <h3>Economia Anual Estimada</h3>
-            <p id="economiaAnualTotal">R$ 0,00</p>
-          </div>
-          <div class="resultado-item">
-            <h3>Redução Estimada na Conta</h3>
-            <p id="reducaoEstimada">0%</p>
-          </div>
-        </div>
-        <button class="form-button" id="contatoBtn">Entrar em Contato</button>
-      </div>
-    </div>
+   
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       lucide.createIcons();
