@@ -60,6 +60,10 @@ header {
   }
 }
 
+#dashboard-mobile-link{
+  display: none;
+}
+
 .nav-right a{
   background-color: #F4A424;
   padding: 12px 16px;
@@ -98,6 +102,9 @@ header {
   color: #fff;
 }
 
+
+
+
 /* Responsividade */
 @media (max-width: 1024px) {
   header {
@@ -107,6 +114,10 @@ header {
 
 @media (max-width: 768px) {
   #contact-link-nav{
+    display: block;
+  }
+
+  #dashboard-mobile-link{
     display: block;
   }
   header nav {
@@ -129,7 +140,7 @@ header {
 }
 
 @media (max-width: 480px) {
-
+  
   #contact-link-nav{
     display: block;
   }
@@ -184,3 +195,4 @@ header {
     }
   }
 }
+

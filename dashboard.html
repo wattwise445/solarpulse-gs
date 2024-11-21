@@ -19,11 +19,13 @@
   <body>
     <header role="banner">
       <nav role="navigation" aria-label="Menu principal">
-        <img
-          src="./img/logo3.svg"
-          alt="Logo SolarPulse - Clique para voltar à página inicial"
-          id="logo"
-        />
+        <a href="/">
+          <img
+            src="./img/logo3.svg"
+            alt="Logo SolarPulse - Clique para voltar à página inicial"
+            id="logo"
+          />
+        </a>
         <div class="navs">
           <div class="nav-left">
             <div
@@ -96,83 +98,83 @@
         </div>
       </div>
       <div class="new-month">
-          <h2>Visão geral dos últimos meses</h2>
-          <button>
-                <i data-lucide="plus"></i>
-                Novo mês
-          </button>
+        <h2>Visão geral dos últimos meses</h2>
+        <button>
+          <i data-lucide="plus"></i>
+          Novo mês
+        </button>
       </div>
 
-        <div class="table-chart-container">
-          <div class="table-wrapper">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>Mês</th>
-                  <th>Produzido</th>
-                  <th>Utilizada</th>
-                  <th>Economia</th>
-                  <th>Modelo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Janeiro</td>
-                  <td>150 kWh</td>
-                  <td>120 kWh</td>
-                  <td>R$ 30,00</td>
-                  <td>AH-3zx</td>
-                </tr>
-                <tr>
-                  <td>Fevereiro</td>
-                  <td>180 kWh</td>
-                  <td>140 kWh</td>
-                  <td>R$ 35,00</td>
-                  <td>AH-3zx</td>
-                </tr>
-                <!-- Adicione mais linhas conforme necessário -->
-              </tbody>
-            </table>
-          </div>
-          <canvas id="economyChart"></canvas>
+      <div class="table-chart-container">
+        <div class="table-wrapper">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Mês</th>
+                <th>Produzido</th>
+                <th>Utilizada</th>
+                <th>Economia</th>
+                <th>Modelo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Janeiro</td>
+                <td>150 kWh</td>
+                <td>120 kWh</td>
+                <td>R$ 30,00</td>
+                <td>AH-3zx</td>
+              </tr>
+              <tr>
+                <td>Fevereiro</td>
+                <td>180 kWh</td>
+                <td>140 kWh</td>
+                <td>R$ 35,00</td>
+                <td>AH-3zx</td>
+              </tr>
+              <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+          </table>
         </div>
-        <div class="modal" id="newMonthModal">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3>Adicionar Novo Mês</h3>
-                <button class="close-modal">&times;</button>
-              </div>
-              <form id="newMonthForm">
-                <div class="form-group">
-                  <label for="month">Mês:</label>
-                  <select id="month" required>
-                    <option value="">Selecione o mês</option>
-                    <option value="Janeiro">Janeiro</option>
-                    <option value="Fevereiro">Fevereiro</option>
-                    <option value="Março">Março</option>
-                    <option value="Abril">Abril</option>
-                    <option value="Maio">Maio</option>
-                    <option value="Junho">Junho</option>
-                    <option value="Julho">Julho</option>
-                    <option value="Agosto">Agosto</option>
-                    <option value="Setembro">Setembro</option>
-                    <option value="Outubro">Outubro</option>
-                    <option value="Novembro">Novembro</option>
-                    <option value="Dezembro">Dezembro</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="produced">Produzido (kWh):</label>
-                  <input type="number" id="produced" required>
-                </div>
-                <div class="form-group">
-                  <label for="used">Utilizado (kWh):</label>
-                  <input type="number" id="used" required>
-                </div>
-                <button type="submit" class="submit-btn">Adicionar</button>
-              </form>
-            </div>
+        <canvas id="economyChart"></canvas>
+      </div>
+      <div class="modal" id="newMonthModal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Adicionar Novo Mês</h3>
+            <button class="close-modal">&times;</button>
           </div>
+          <form id="newMonthForm">
+            <div class="form-group">
+              <label for="month">Mês:</label>
+              <select id="month" required>
+                <option value="">Selecione o mês</option>
+                <option value="Janeiro">Janeiro</option>
+                <option value="Fevereiro">Fevereiro</option>
+                <option value="Março">Março</option>
+                <option value="Abril">Abril</option>
+                <option value="Maio">Maio</option>
+                <option value="Junho">Junho</option>
+                <option value="Julho">Julho</option>
+                <option value="Agosto">Agosto</option>
+                <option value="Setembro">Setembro</option>
+                <option value="Outubro">Outubro</option>
+                <option value="Novembro">Novembro</option>
+                <option value="Dezembro">Dezembro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="produced">Produzido (kWh):</label>
+              <input type="number" id="produced" required />
+            </div>
+            <div class="form-group">
+              <label for="used">Utilizado (kWh):</label>
+              <input type="number" id="used" required />
+            </div>
+            <button type="submit" class="submit-btn">Adicionar</button>
+          </form>
+        </div>
+      </div>
     </main>
     <footer>
       <div class="footer-container">
@@ -238,14 +240,16 @@
         type: "bar",
         data: {
           labels: ["Janeiro", "Fevereiro"],
-          datasets: [{
-            label: "Economia Gerada (R$)",
-            data: [30.00, 35.00],
-            backgroundColor: "#f4a424",
-            borderColor: "#f4a424",
-            borderWidth: 1,
-            opacity: 1
-          }]
+          datasets: [
+            {
+              label: "Economia Gerada (R$)",
+              data: [30.0, 35.0],
+              backgroundColor: "#f4a424",
+              borderColor: "#f4a424",
+              borderWidth: 1,
+              opacity: 1,
+            },
+          ],
         },
         options: {
           scales: {
@@ -253,17 +257,17 @@
               beginAtZero: true,
               title: {
                 display: true,
-                text: 'Economia (R$)'
-              }
+                text: "Economia (R$)",
+              },
             },
             x: {
               title: {
                 display: true,
-                text: 'Meses'
-              }
-            }
-          }
-        }
+                text: "Meses",
+              },
+            },
+          },
+        },
       });
     </script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -272,6 +276,5 @@
     </script>
     <script src="./js/menu.js"></script>
     <script src="./js/dashboard.js"></script>
-    
   </body>
 </html>
